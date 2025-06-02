@@ -1,0 +1,37 @@
+
+
+model5
+df['sma_7'] = ta.trend.SMAIndicator(close, window=7).sma_indicator()
+df['sma_25'] = ta.trend.SMAIndicator(close, window=25).sma_indicator()
+df['sma_99'] = ta.trend.SMAIndicator(close, window=99).sma_indicator()
+Validation accuracy: Model saved as model5.h5
+Validation accuracy: 67.10%
+
+model6
+df['sma_5'] = ta.trend.SMAIndicator(close, window=5).sma_indicator()
+df['sma_10'] = ta.trend.SMAIndicator(close, window=10).sma_indicator()
+df['sma_25'] = ta.trend.SMAIndicator(close, window=25).sma_indicator()
+Validation accuracy: 67.13%
+
+
+python bot4_trend_oscillator.py
+
+python bot1_ema.py
+EMA Bot Validation accuracy: 56.28%
+
+python bot2_sma_rsi.py
+SMA+RSI Bot Validation accuracy: 56.31%
+
+python bot3_bb_macd.py
+Bollinger+MACD Bot Validation accuracy: 56.29%
+
+python bot4_trend_oscillator.py
+ONEDNN_OPTS=0`.
+Downloading data...
+[*********************100%***********************]  1 of 1 completed
+
+python bot5_volume_volatility.py
+Volume+Volatility Bot Validation accuracy: 56.24%
+
+python train_pocket_option_model.py
+

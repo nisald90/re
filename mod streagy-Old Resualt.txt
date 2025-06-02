@@ -1,0 +1,39 @@
+model1
+
+df['ema_10'] = ta.trend.EMAIndicator(close, window=10).ema_indicator()
+df['ema_20'] = ta.trend.EMAIndicator(close, window=20).ema_indicator()
+df['ema_50'] = ta.trend.EMAIndicator(close, window=50).ema_indicator()
+Validation accuracy: 71.59%
+
+model2
+df['ema_7'] = ta.trend.EMAIndicator(close, window=7).ema_indicator()
+df['ema_25'] = ta.trend.EMAIndicator(close, window=25).ema_indicator()
+df['ema_50'] = ta.trend.EMAIndicator(close, window=50).ema_indicator()
+Validation accuracy: 71.61%
+
+
+model3
+df['ema_5'] = ta.trend.EMAIndicator(close, window=5).ema_indicator()
+df['ema_14'] = ta.trend.EMAIndicator(close, window=14).ema_indicator()
+df['ema_25'] = ta.trend.EMAIndicator(close, window=25).ema_indicator()
+Validation accuracy: 71.66%
+
+model4
+df['ema_21'] = ta.trend.EMAIndicator(close, window=21).ema_indicator()
+df['ema_58'] = ta.trend.EMAIndicator(close, window=58).ema_indicator()
+df['ema_89'] = ta.trend.EMAIndicator(close, window=89).ema_indicator()
+71.78%
+
+model5
+df['sma_7'] = ta.trend.SMAIndicator(close, window=7).sma_indicator()
+df['sma_25'] = ta.trend.SMAIndicator(close, window=25).sma_indicator()
+df['sma_99'] = ta.trend.SMAIndicator(close, window=99).sma_indicator()
+Validation accuracy: 71.93%
+
+model6
+df['sma_5'] = ta.trend.SMAIndicator(close, window=5).sma_indicator()
+df['sma_10'] = ta.trend.SMAIndicator(close, window=10).sma_indicator()
+df['sma_25'] = ta.trend.SMAIndicator(close, window=25).sma_indicator()
+Validation accuracy: 71.83%
+
+
